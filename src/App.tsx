@@ -1,25 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createTheme, ThemeProvider } from "@mui/material";
+import "./App.css";
+import AnimatedRoutes from "./components/AnimatedRoutes";
+import React, { useEffect } from "react";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: '"Poppins", sans-serif',
+  },
+  palette: {
+    primary: {
+      main: "#39CDCC", // desired background color of AppBar
+    },
+  },
+});
 
 function App() {
+  const apiUrl =
+    "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users";
+  const localStorageKey = "users";
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        localStorage.setItem(localStorageKey, JSON.stringify(data));
+        console.log(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchUsers();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <AnimatedRoutes />
+    </ThemeProvider>
   );
 }
 
