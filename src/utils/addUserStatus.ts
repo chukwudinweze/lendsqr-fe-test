@@ -1,6 +1,7 @@
 import { UserType } from "../components/SharedComponent/UserType";
 import { formatDate } from "./formatDate";
 import { userStatus } from "../components/UserOverview/userStatus";
+import { formatPhoneNo } from "./formatPhoneNo";
 
 export const addUserStatus = (users: UserType[]) => {
   // Declare status properties to be appended to the fetched users property
@@ -9,17 +10,16 @@ export const addUserStatus = (users: UserType[]) => {
   const modifiedUsers = users.map((user: UserType) => {
     // Format the createdAt date
     let createdAt = formatDate(user.createdAt);
+    let phoneNumber = formatPhoneNo(user.phoneNumber);
 
     // Destructure the user object to extract the relevant properties
-    const { id, userName, phoneNumber, orgName } = user;
+    // const { id, userName, orgName, email, profile, accountBalance } = user;
 
     // Append the declared status properties to the modified user object
     return {
-      id,
-      userName,
+      ...user,
       phoneNumber,
       createdAt,
-      orgName,
       randomStatus,
       randomStatusColor,
       randomBgColor,

@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding-left: 6px;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  .avatar {
+    color: "#213F7D";
+    width: "19.67px";
+  }
+  .notification {
+    color: "#213F7D";
+    width: "19.67px";
+  }
+}

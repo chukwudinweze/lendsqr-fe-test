@@ -4,23 +4,16 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useAppDispatch } from "../../store/hooks";
 import { activateUser, blacklistUser } from "../../store/userSlice";
+import { Link } from "react-router-dom";
 
 interface DropdownMenuProps {
   id: string;
   label: string;
   status: string;
-  //   handleBlacklistUser: (id: string) => void;
-  //   handleActivateUser: (id: string) => void;
-
   children: React.ReactNode;
 }
 
-const DropdownMenu: React.FC<DropdownMenuProps> = ({
-  id,
-  children,
-  //   handleBlacklistUser,
-  //   handleActivateUser,
-}) => {
+const DropdownMenu: React.FC<DropdownMenuProps> = ({ id, children }) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -66,7 +59,9 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
           horizontal: "left",
         }}
       >
-        <MenuItem onClick={handleClose}>View Details</MenuItem>
+        <MenuItem>
+          <Link to={`/users/${id}`}> View Details</Link>
+        </MenuItem>
         <MenuItem onClick={handleBlacklistUser}>Blacklist User</MenuItem>
         <MenuItem onClick={handleActivateUser}>Activate User</MenuItem>
       </Menu>

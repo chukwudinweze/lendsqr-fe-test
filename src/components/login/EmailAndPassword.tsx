@@ -3,6 +3,8 @@ import { useFormik } from "formik";
 import { schema } from "../../utils/loginValidationSchema";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack/Stack";
+import { useNavigate } from "react-router-dom";
+import "./EmailAndPassword.scss";
 
 interface InputValues {
   email: string;
@@ -10,6 +12,7 @@ interface InputValues {
 }
 
 const EmailAndPassword: React.FC = () => {
+  let navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -17,7 +20,8 @@ const EmailAndPassword: React.FC = () => {
     },
     validationSchema: schema,
     onSubmit: (values: InputValues) => {
-      console.log(values);
+      navigate("/dashboard");
+      formik.resetForm();
     },
   });
   return (
@@ -44,29 +48,14 @@ const EmailAndPassword: React.FC = () => {
           error={formik.touched.password && Boolean(formik.errors.password)}
           helperText={formik.touched.password && formik.errors.password}
         />
-        <Button
-          variant="text"
-          type="button"
-          sx={{
-            alignContent: "left",
-            width: "147px",
-            fontSize: "12px",
-            fontStyle: "Demi Bold",
-            fontWeight: "600",
-            color: "#39CDCC",
-            marginTop: "-10px",
-          }}
-        >
+        <Button className="forgot-password-btn" variant="text" type="button">
           Forgot Password
         </Button>
         <Button
+          className="login-btn"
           variant="contained"
           fullWidth
           type="submit"
-          sx={{
-            background: "#39CDCC",
-            color: "#fff",
-          }}
         >
           Log in
         </Button>

@@ -27,3 +27,10 @@ a {
   font-family: "Avenir Next";
   src: url("../public/fonts/AvenirNextLTPro-Bold.otf") format("truetype");
 }
+
+.my-datepicker {
+  width: 100%;
+  padding: 16px 5px;
+  border-radius: 3px;
+  border: 1px solid #d3d3d3;
+}

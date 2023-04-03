@@ -1,10 +1,12 @@
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import EmailAndPassword from "./EmailAndPassword";
+import "./LoginFormSection.scss";
 
 const LoginFormSection = () => {
   return (
     <Stack
+      className="welcome-section"
       padding="0 100px"
       paddingRight="150px"
       gap={5}

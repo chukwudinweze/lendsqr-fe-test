@@ -18,10 +18,12 @@ import DropdownMenu from "./DropdownMenu";
 import { UserType } from "../SharedComponent/UserType";
 import { useAppSelector } from "../../store/hooks";
 import filterIcon from "../../assets/filterIcon.png";
+import Box from "@mui/material/Box/Box";
 
 const tableHeads = [
   "ORGANIZATION",
   "USERNAME",
+  "EMAIL",
   "PHONE NUMBER",
   "DATE JOINED",
   "STATUS",
@@ -53,10 +55,14 @@ const UserListTable: React.FC = () => {
   };
 
   return (
-    <div>
+    <Box sx={{ overflowX: { xs: "auto", sm: "auto", lg: "hidden" } }}>
       <TableContainer
         component={Paper}
-        style={{ overflowX: "hidden", paddingLeft: "10px" }}
+        style={{
+          overflowX: "hidden",
+          paddingLeft: "10px",
+          boxShadow: "3px 5px 20px rgba(0, 0, 0, 0.04)",
+        }}
       >
         <Table>
           <TableHead>
@@ -94,6 +100,7 @@ const UserListTable: React.FC = () => {
                   id,
                   orgName,
                   userName,
+                  email,
                   phoneNumber,
                   createdAt,
                   randomBgColor,
@@ -111,6 +118,9 @@ const UserListTable: React.FC = () => {
                       <Typography style={tableContentStyle}>
                         {userName}
                       </Typography>
+                    </TableCell>
+                    <TableCell>
+                      <Typography style={tableContentStyle}>{email}</Typography>
                     </TableCell>
                     <TableCell>
                       <Typography style={tableContentStyle}>
@@ -131,7 +141,12 @@ const UserListTable: React.FC = () => {
                             background: randomBgColor,
                           }}
                         />
-                        <div style={{ position: "absolute", right: "-30px" }}>
+                        <div
+                          style={{
+                            position: "absolute",
+                            right: "-40px",
+                          }}
+                        >
                           <DropdownMenu
                             id={id}
                             label={randomStatus}
@@ -167,7 +182,7 @@ const UserListTable: React.FC = () => {
           justifyContent: "flex-start",
         }}
       />
-    </div>
+    </Box>
   );
 };
 

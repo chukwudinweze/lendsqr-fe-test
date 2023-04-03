@@ -3,13 +3,15 @@ import { Stack } from "@mui/system";
 import React from "react";
 import Typography from "@mui/material/Typography";
 import { NavLink } from "react-router-dom";
+import "./SideNavItem.scss";
 
-const SideNavItem: React.FC<{ icon: string; label: string }> = ({
+const SideNavItem: React.FC<{ icon: string; label: string; link: string }> = ({
   icon,
   label,
+  link,
 }) => {
   return (
-    <NavLink to="#">
+    <NavLink to={link} className={({ isActive }) => (isActive ? "active" : "")}>
       <Stack
         direction="row"
         alignItems="center"

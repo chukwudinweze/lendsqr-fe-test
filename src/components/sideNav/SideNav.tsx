@@ -6,12 +6,15 @@ import SideNavItem from "./SideNavItem";
 
 const SideNav = () => {
   return (
-    <Box sx={{ minWidth: "230px" }}>
+    <Box
+      display={{ xs: "none", sm: "none", lg: "block" }}
+      sx={{ minWidth: "230px" }}
+    >
       {navItems.map((navItem, index) => {
         const { contents, section } = navItem;
 
         return (
-          <Stack padding="0 0px 0 0px">
+          <Stack>
             <Stack key={index} gap={1}>
               <Typography
                 fontSize="12px"

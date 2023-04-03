@@ -27,50 +27,51 @@ interface NavItem {
 interface NavItemContent {
   label: string;
   icon: string;
+  link: string;
 }
 
 const navItems: NavItem[] = [
   {
     section: "",
     contents: [
-      { label: "Switch Organization", icon: briefcaseIcon },
-      { label: "Dashboard", icon: homeIcon },
+      { label: "Switch Organization", icon: briefcaseIcon, link: "/none" },
+      { label: "Dashboard", icon: homeIcon, link: "/dashboard" },
     ],
   },
   {
     section: "CUSTOMERS",
     contents: [
-      { label: "Users", icon: usersIcon },
-      { label: "Guarantors", icon: guarantorsIcon },
-      { label: "Loans", icon: loanIcon },
-      { label: "Decision Models", icon: handShakeIcon },
-      { label: "Loans", icon: loanIcon },
-      { label: "Savings", icon: savingsIcon },
-      { label: "Loan Requests", icon: loanRequestIcon },
-      { label: "Whitelist", icon: userCheckIcon },
-      { label: "Karma", icon: userTimesIcon },
+      { label: "Users", icon: usersIcon, link: "/users" },
+      { label: "Guarantors", icon: guarantorsIcon, link: "/none" },
+      { label: "Loans", icon: loanIcon, link: "/none" },
+      { label: "Decision Models", icon: handShakeIcon, link: "/none" },
+      { label: "Loans", icon: loanIcon, link: "/none" },
+      { label: "Savings", icon: savingsIcon, link: "/none" },
+      { label: "Loan Requests", icon: loanRequestIcon, link: "/none" },
+      { label: "Whitelist", icon: userCheckIcon, link: "/none" },
+      { label: "Karma", icon: userTimesIcon, link: "/none" },
     ],
   },
   {
     section: "BUSINESSES",
     contents: [
-      { label: "Organization", icon: briefcaseIcon },
-      { label: "Loan Requests", icon: loanRequestIcon },
-      { label: "Savings Products", icon: savingsProductIcon },
-      { label: "Fees and Charges", icon: coinsIcon },
-      { label: "Transactions", icon: transactionsIcon },
-      { label: "Services", icon: serviceIcon },
-      { label: "Service Account", icon: serviceActIcon },
-      { label: "Settlements", icon: SettlementIcon },
-      { label: "Reports", icon: reportIcon },
+      { label: "Organization", icon: briefcaseIcon, link: "/none" },
+      { label: "Loan Requests", icon: loanRequestIcon, link: "/none" },
+      { label: "Savings Products", icon: savingsProductIcon, link: "/none" },
+      { label: "Fees and Charges", icon: coinsIcon, link: "/none" },
+      { label: "Transactions", icon: transactionsIcon, link: "/none" },
+      { label: "Services", icon: serviceIcon, link: "/none" },
+      { label: "Service Account", icon: serviceActIcon, link: "/none" },
+      { label: "Settlements", icon: SettlementIcon, link: "/none" },
+      { label: "Reports", icon: reportIcon, link: "/none" },
     ],
   },
   {
     section: "SETTINGS",
     contents: [
-      { label: "Preferences", icon: preferences },
-      { label: "Fees and Pricing", icon: feesAndPricingIcon },
-      { label: "Audit Logs", icon: auditLogIcon },
+      { label: "Preferences", icon: preferences, link: "/none" },
+      { label: "Fees and Pricing", icon: feesAndPricingIcon, link: "/none" },
+      { label: "Audit Logs", icon: auditLogIcon, link: "/none" },
     ],
   },
 ];

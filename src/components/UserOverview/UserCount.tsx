@@ -12,12 +12,13 @@ const UserCount: React.FC<userCountDataType> = ({
     <Stack
       gap={1}
       sx={{
-        width: "240px",
+        width: "235px",
         height: "160px",
         background: "#fff",
         justifyContent: "center",
         padding: "0 30px",
         borderRadius: "3px",
+        boxShadow: "3px 5px 20px rgba(0, 0, 0, 0.04)",
       }}
     >
       <Stack

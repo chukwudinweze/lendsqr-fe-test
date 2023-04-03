@@ -8,21 +8,11 @@ import IconButton from "@mui/material/IconButton";
 import { Avatar } from "@mui/material";
 import profileImage from "../../assets/profileImage.png";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import "./Header.scss";
 
 const Header = () => {
   return (
-    <Stack
-      component="header"
-      direction="row"
-      alignItems="center"
-      gap={16}
-      width="100%"
-      height="100px"
-      paddingLeft="6px"
-      sx={{ boxShadow: "rgba(0, 0, 0, 0.04) 0px 3px 0px" }}
-      //       Offset: 3px, 0px
-      // rgba(0, 0, 0, 0.04)
-    >
+    <Stack className="header" component="header" direction="row" gap={16}>
       <LogoAndName />
       <Stack component="nav" direction="row" gap={35}>
         <SearchInput />
@@ -40,6 +30,7 @@ const Header = () => {
             Docs
           </Typography>
           <IconButton
+            className="notification"
             color="secondary"
             aria-label="add an alarm"
             sx={{ color: "#213F7D", width: "19.67px" }}
@@ -47,8 +38,9 @@ const Header = () => {
             <NotificationsNoneIcon />
           </IconButton>
           <Avatar
+            className="avater"
             alt="Profile Picture"
-            sx={{ width: "48px", height: "48px" }}
+            // sx={{ width: "48px", height: "48px" }}
             src={profileImage}
           />
           <Stack direction="row" alignItems="center">

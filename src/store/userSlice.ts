@@ -9,7 +9,7 @@ const modifiedUsers = addUserStatus(totalusers);
 const initialState: UserType[] = modifiedUsers;
 
 const userSlice = createSlice({
-  name: "completedTxn",
+  name: "Users",
   initialState,
   reducers: {
     blacklistUser(state, action: PayloadAction<string>) {
@@ -41,9 +41,16 @@ const userSlice = createSlice({
         }
       });
     },
+    filterUsers(state, action: PayloadAction<UserType[]>) {
+      return action.payload;
+    },
+    resetFilter(state, action: PayloadAction) {
+      return modifiedUsers;
+    },
   },
 });
 
-export const { activateUser, blacklistUser } = userSlice.actions;
+export const { activateUser, blacklistUser, filterUsers, resetFilter } =
+  userSlice.actions;
 
 export default userSlice;
