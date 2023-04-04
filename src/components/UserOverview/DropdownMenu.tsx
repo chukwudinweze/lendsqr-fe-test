@@ -5,6 +5,12 @@ import MenuItem from "@mui/material/MenuItem";
 import { useAppDispatch } from "../../store/hooks";
 import { activateUser, blacklistUser } from "../../store/userSlice";
 import { Link } from "react-router-dom";
+import viewDetailIcon from "../../assets/viewDetaiBtn.png";
+import blacklistUserIcon from "../../assets/blacklistIcon.png";
+import activateUserIcon from "../../assets/activateIcon.png";
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
+import { Stack } from "@mui/system";
 
 interface DropdownMenuProps {
   id: string;
@@ -60,10 +66,43 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ id, children }) => {
         }}
       >
         <MenuItem>
-          <Link to={`/users/${id}`}> View Details</Link>
+          <Link to={`/users/${id}`}>
+            <Stack gap={1} direction="row" alignItems="center">
+              <Avatar
+                sx={{
+                  width: "14px",
+                  height: "14px",
+                }}
+                src={viewDetailIcon}
+                alt="view detal"
+              />
+              <Typography color="rgba(84, 95, 125, 1)">
+                {" "}
+                View Details
+              </Typography>
+            </Stack>
+          </Link>
         </MenuItem>
-        <MenuItem onClick={handleBlacklistUser}>Blacklist User</MenuItem>
-        <MenuItem onClick={handleActivateUser}>Activate User</MenuItem>
+        <MenuItem onClick={handleBlacklistUser}>
+          <Stack gap={1} direction="row" alignItems="center">
+            <Avatar
+              sx={{ width: "14px", height: "14px" }}
+              src={blacklistUserIcon}
+              alt="blacklist user"
+            />
+            <Typography color="rgba(84, 95, 125, 1)">Blacklist User</Typography>
+          </Stack>
+        </MenuItem>
+        <MenuItem onClick={handleActivateUser}>
+          <Stack gap={1} direction="row" alignItems="center">
+            <Avatar
+              sx={{ width: "14px", height: "14px" }}
+              src={activateUserIcon}
+              alt="activate user"
+            />
+            <Typography color="rgba(84, 95, 125, 1)">Activate User</Typography>
+          </Stack>
+        </MenuItem>
       </Menu>
     </div>
   );
