@@ -1,4 +1,4 @@
-### `Project Descriptin`
+### `Project Description`
 
 This project is a React application built using TypeScript and SCSS. It includes a login page, dashboard, users page, and user detail page.
 
