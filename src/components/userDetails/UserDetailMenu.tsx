@@ -82,9 +82,9 @@ const UserDetailMenu: React.FC<{ user: UserType }> = ({ user }) => {
         <Divider orientation="vertical" flexItem />
         <Stack>
           <Typography
+            fontSize={{ xs: "18px", sm: "22px" }}
             style={{
               fontFamily: "Work Sans, sans-serif",
-              fontSize: "22px",
               color: "rgba(33, 63, 125, 1)",
               fontWeight: "500",
             }}
@@ -92,10 +92,11 @@ const UserDetailMenu: React.FC<{ user: UserType }> = ({ user }) => {
             &#x20A6;{accountBalance}
           </Typography>
           <Typography
+            fontSize={{ xs: "10px", sm: "12px" }}
             style={{
               fontFamily: "Work Sans, sans-serif",
               color: "rgba(33, 63, 125, 1)",
-              fontSize: "12px",
+              whiteSpace: "normal",
             }}
           >
             9912345678/Providus Bank

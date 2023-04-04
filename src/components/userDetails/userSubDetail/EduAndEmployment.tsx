@@ -1,8 +1,7 @@
 import { Stack } from "@mui/system";
 import React from "react";
-import { formatPhoneNo } from "../../utils/formatPhoneNo";
-import { UserType } from "../SharedComponent/UserType";
-import UserDetailItem from "./UserDetailItem";
+import { UserType } from "../../SharedComponent/UserType";
+import UserDetailItem from "../UserDetailItem";
 
 const EduAndEmployment: React.FC<{ title: string; user: UserType }> = ({
   title,
@@ -16,7 +15,6 @@ const EduAndEmployment: React.FC<{ title: string; user: UserType }> = ({
   const firstIncome = user?.education?.monthlyIncome[0];
   const secondIncome = user?.education?.monthlyIncome[0];
   const loanRepayment = user?.education?.loanRepayment;
-  const naira = "&#8358";
 
   //   console.log(monthlyIncome);
 
@@ -27,18 +25,12 @@ const EduAndEmployment: React.FC<{ title: string; user: UserType }> = ({
   let modifiedSecondIncome = +secondIncome;
 
   return (
-    <Stack paddingBottom="30px" gap={1}>
-      <Stack
-        paddingTop="16px"
-        fontSize="16px"
-        fontWeight="500"
-        color="rgba(33, 63, 125, 1)"
-        width="100%"
-        component="p"
-      >
+    <Stack className="user_sub_details_section" gap={1}>
+      <Stack component="p" className="title">
         {title}
       </Stack>
       <Stack
+        className="user_sub_detail"
         width="100%"
         direction="row"
         flexWrap="wrap"
@@ -58,7 +50,7 @@ const EduAndEmployment: React.FC<{ title: string; user: UserType }> = ({
           value={`₦${modifiedFirstIncome.toLocaleString()}-${modifiedSecondIncome.toLocaleString()}`}
         />
         <UserDetailItem
-          label="LOan Repayment"
+          label="Loan Repayment"
           value={`₦${modifiedLoan.toLocaleString()}`}
         />
       </Stack>

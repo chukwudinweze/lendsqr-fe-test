@@ -5,30 +5,22 @@ import "./LoginFormSection.scss";
 
 const LoginFormSection = () => {
   return (
-    <Stack
-      className="welcome-section"
-      padding="0 100px"
-      paddingRight="150px"
-      gap={5}
-      justifyContent="center"
-      alignContent="center"
-      sx={{ width: "50%", paddingTop: "50px" }}
-    >
+    <Stack className="welcome_section" gap={5}>
       <Stack gap={1}>
         <Typography
+          className="welcome"
           variant="h1"
           color="#213F7D"
           fontFamily="Avenir Next"
-          sx={{ fontWeight: 700, fontSize: "40px", lineHeight: "54.64px" }}
         >
           Welcome!
         </Typography>
         <Typography
+          className="enter_details_to_login"
           variant="body2"
           component="p"
           color="#545F7D"
           fontFamily="Avenir Next"
-          sx={{ fontWeight: 400, fontSize: "20px", lineHeight: "27.32pxpx" }}
         >
           Enter details to login.
         </Typography>

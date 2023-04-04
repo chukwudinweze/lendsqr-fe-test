@@ -1,10 +1,10 @@
 import Stack from "@mui/material/Stack";
 import React from "react";
 import { UserType } from "../SharedComponent/UserType";
-import EduAndEmployment from "./EduAndEmployment";
-import GuarantorDetail from "./GuarantorDetail";
-import PersonalInfo from "./PersonalInfo";
-import Socials from "./Socials";
+import EduAndEmployment from "./userSubDetail/EduAndEmployment";
+import GuarantorDetail from "./userSubDetail/GuarantorDetail";
+import PersonalInfo from "./userSubDetail/PersonalInfo";
+import Socials from "./userSubDetail/Socials";
 
 const UserFullDetail: React.FC<{ user: UserType }> = ({ user }) => {
   return (

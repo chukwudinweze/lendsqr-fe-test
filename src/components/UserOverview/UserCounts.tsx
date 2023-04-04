@@ -7,7 +7,7 @@ const UserCounts = () => {
   const userData = useUserData();
 
   return (
-    <Stack direction="row" gap={2}>
+    <Stack direction={{ xs: "column", sm: "row", lg: "row" }} gap={2}>
       {userData.map((data, index) => {
         return <UserCount key={index} {...data} />;
       })}

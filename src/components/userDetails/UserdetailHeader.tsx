@@ -17,6 +17,7 @@ const UserdetailHeader: React.FC<{ id: string | undefined }> = ({ id }) => {
         </Stack>
       </Link>
       <Stack
+        className="btn_cover"
         direction="row"
         justifyContent="space-between"
         alignItems="center"
@@ -26,6 +27,7 @@ const UserdetailHeader: React.FC<{ id: string | undefined }> = ({ id }) => {
         <PageTitle title="Users" />
         <Stack gap={2} direction="row" justifyContent="space-between">
           <Button
+            className="block_user_btn"
             onClick={() => dispatch(blacklistUser(id!))}
             variant="outlined"
             sx={{
@@ -37,6 +39,7 @@ const UserdetailHeader: React.FC<{ id: string | undefined }> = ({ id }) => {
             Block user
           </Button>
           <Button
+            className="activat_user_btn"
             onClick={() => dispatch(activateUser(id!))}
             variant="outlined"
             sx={{

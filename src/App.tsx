@@ -1,5 +1,5 @@
 import { createTheme, ThemeProvider } from "@mui/material";
-import "./App.css";
+import "./App.scss";
 import AnimatedRoutes from "./components/AnimatedRoutes";
 import React, { useEffect } from "react";
 

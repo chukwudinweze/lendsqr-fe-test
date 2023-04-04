@@ -10,6 +10,7 @@ const UserOverview: React.FC = () => {
       gap={2}
       sx={{
         backgroundColor: "#E5E5E5",
+        width: "100%",
         flex: 1,
         padding: "20px",
       }}

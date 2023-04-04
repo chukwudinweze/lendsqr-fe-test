@@ -59,7 +59,7 @@ const UserListTable: React.FC = () => {
       <TableContainer
         component={Paper}
         style={{
-          overflowX: "hidden",
+          overflowX: "auto",
           paddingLeft: "10px",
           boxShadow: "3px 5px 20px rgba(0, 0, 0, 0.04)",
         }}

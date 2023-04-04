@@ -1,8 +1,9 @@
 import { Stack } from "@mui/system";
 import React from "react";
-import { formatPhoneNo } from "../../utils/formatPhoneNo";
-import { UserType } from "../SharedComponent/UserType";
-import UserDetailItem from "./UserDetailItem";
+import { formatPhoneNo } from "../../../utils/formatPhoneNo";
+import { UserType } from "../../SharedComponent/UserType";
+import UserDetailItem from "../UserDetailItem";
+import "./userSubDetail.scss";
 
 const PersonalInfo: React.FC<{ title: string; user: UserType }> = ({
   title,
@@ -21,18 +22,12 @@ const PersonalInfo: React.FC<{ title: string; user: UserType }> = ({
   }
 
   return (
-    <Stack paddingBottom="30px" gap={1}>
-      <Stack
-        paddingTop="16px"
-        fontSize="16px"
-        fontWeight="500"
-        color="rgba(33, 63, 125, 1)"
-        width="100%"
-        component="p"
-      >
+    <Stack className="user_sub_details_section" paddingBottom="30px" gap={1}>
+      <Stack component="p" className="title">
         {title}
       </Stack>
       <Stack
+        className="user_sub_detail"
         width="100%"
         direction="row"
         flexWrap="wrap"

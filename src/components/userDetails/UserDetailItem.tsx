@@ -8,8 +8,9 @@ const UserDetailItem: React.FC<{ label: string; value: string }> = ({
 }) => {
   return (
     <Stack
+      overflow={"hidden"}
       sx={{
-        width: "20%",
+        width: { xs: "33.3%", sm: "20%" },
         marginTop: "10px",
       }}
     >

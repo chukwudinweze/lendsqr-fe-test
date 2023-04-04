@@ -1,0 +1,26 @@
+.user_sub_details_section {
+  padding-bottom: 30px;
+  gap: 1;
+}
+
+.title {
+  padding-top: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(33, 63, 125, 1);
+  width: 100%;
+  p {
+    width: 100%;
+  }
+}
+
+.user_sub_detail {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.user_sub_detail .MuiListItem-root {
+  padding-left: 0;
+  margin-right: 20px;
+}

@@ -1,0 +1,22 @@
+.search_nav {
+  .search_input {
+    border: 1px solid #545f7d;
+    width: 300px;
+    border-radius: 5px;
+  }
+  .search_input_box {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+    padding: 0 10px;
+  }
+  .search_button {
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    background: #39cdcc;
+  }
+}

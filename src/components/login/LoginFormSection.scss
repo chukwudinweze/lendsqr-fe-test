@@ -1,9 +1,24 @@
-// .welcome-section {
-//   padding: 0 100px;
-//   padding-right: 150px;
-//   justify-content: center;
-//   align-items: center;
-//   width: 50%;
-//   padding-top: 50px;
-//   //   border: 1px solid red;
-// }
+.welcome_section {
+  padding: 0 100px;
+  padding-right: 150px;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+  padding-top: 50px;
+
+  .welcome {
+    color: #213f7d;
+    font-family: "Avenir Next";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54.64px;
+  }
+
+  .enter_details_to_login {
+    color: #545f7d;
+    font-family: "Avenir Next";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27.32pxpx;
+  }
+}

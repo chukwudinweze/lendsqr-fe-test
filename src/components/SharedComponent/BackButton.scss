@@ -1,0 +1,16 @@
+.back_button {
+  max-width: 200px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+  padding-left: -20px;
+  color: rgba(84, 95, 125, 1);
+  text-align: left;
+  font-family: "Work Sans, sans-serif";
+  text-transform: capitalize;
+
+  .MuiButton-startIcon {
+    margin-right: 8px;
+    color: rgba(84, 95, 125, 1);
+  }
+}

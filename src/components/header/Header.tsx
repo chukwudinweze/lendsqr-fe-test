@@ -9,14 +9,30 @@ import { Avatar } from "@mui/material";
 import profileImage from "../../assets/profileImage.png";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import "./Header.scss";
+import MobileSideNAv from "../sideNav/MobileSideNAv";
 
 const Header = () => {
   return (
-    <Stack className="header" component="header" direction="row" gap={16}>
+    <Stack
+      className="header"
+      component="header"
+      direction="row"
+      gap={{ xs: 1, sm: 8, lg: 16 }}
+      justifyContent="space-between"
+    >
+      <Stack display={{ lg: "none" }}>
+        <MobileSideNAv />
+      </Stack>
       <LogoAndName />
       <Stack component="nav" direction="row" gap={35}>
-        <SearchInput />
-        <Stack direction="row" alignItems="center" gap={3}>
+        <Stack display={{ xs: "none", sm: "none", lg: "flex" }}>
+          <SearchInput />
+        </Stack>
+        <Stack
+          direction="row"
+          alignItems="center"
+          gap={{ xs: 2, sm: 2, lg: 3 }}
+        >
           <Typography
             component="a"
             sx={{
@@ -43,7 +59,11 @@ const Header = () => {
             // sx={{ width: "48px", height: "48px" }}
             src={profileImage}
           />
-          <Stack direction="row" alignItems="center">
+          <Stack
+            direction="row"
+            alignItems="center"
+            display={{ xs: "none", sm: "flex", lg: "flex" }}
+          >
             <Typography component="p">Adedeji</Typography>
             <IconButton
               color="secondary"
