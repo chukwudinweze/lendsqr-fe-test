@@ -18,7 +18,12 @@ const UserOverview: React.FC = () => {
 
   if (loading) {
     return (
-      <Box sx={{ width: 300 }}>
+      <Box sx={{ width: "80%" }}>
+        <Skeleton />
+        <Skeleton />
+        <Skeleton />
+        <Skeleton />
+        <Skeleton />
         <Skeleton />
         <Skeleton animation="wave" />
         <Skeleton animation={false} />
