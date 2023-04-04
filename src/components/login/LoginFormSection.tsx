@@ -5,7 +5,15 @@ import "./LoginFormSection.scss";
 
 const LoginFormSection = () => {
   return (
-    <Stack className="welcome_section" gap={5}>
+    <Stack
+      className="welcome_section"
+      gap={5}
+      width="100%"
+      sx={{
+        padding: { xs: "80px 0", sm: "80 0", lg: "0 100px" },
+        paddingRight: { xs: "0", sm: "0", lg: "150px" },
+      }}
+    >
       <Stack gap={1}>
         <Typography
           className="welcome"

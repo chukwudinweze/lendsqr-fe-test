@@ -11,7 +11,11 @@ const LoginPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <Stack direction={"row"} width="100%" sx={{ padding: "50px 16px" }}>
+      <Stack
+        direction={{ xs: "column", sm: "column", lg: "row" }}
+        width="100%"
+        sx={{ padding: "50px 16px" }}
+      >
         <LoginLogoSection />
         <LoginFormSection />
       </Stack>

@@ -12,6 +12,7 @@ const LoginLogoSection = () => {
         <LogoAndName />
       </Box>
       <Avatar
+        sx={{ display: { xs: "none", sm: "none", lg: "flex" } }}
         className="pablo_sign_in"
         alt="pablo-sign-in"
         src={SignImg}

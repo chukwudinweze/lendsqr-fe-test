@@ -12,7 +12,7 @@ const UserOverview: React.FC = () => {
         backgroundColor: "#E5E5E5",
         width: "100%",
         flex: 1,
-        padding: "20px",
+        padding: "10px",
       }}
     >
       <PageTitle title="Users" />
