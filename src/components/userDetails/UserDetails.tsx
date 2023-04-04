@@ -2,12 +2,11 @@ import Skeleton from "@mui/material/Skeleton";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import UserdetailHeader from "./UserdetailHeader";
 import UserDetailMenu from "./UserDetailMenu";
 import UserFullDetail from "./UserFullDetail";
 import { useParams } from "react-router-dom";
-import { UserType } from "../SharedComponent/UserType";
 import useFetchDetail, { FetchDetailReturn } from "../Hooks/useFetchUserDetail";
 
 const UserDetails: React.FC = () => {
@@ -24,7 +23,12 @@ const UserDetails: React.FC = () => {
 
   if (loading) {
     return (
-      <Box sx={{ width: 300 }}>
+      <Box sx={{ width: "80%" }}>
+        <Skeleton />
+        <Skeleton />
+        <Skeleton />
+        <Skeleton />
+        <Skeleton />
         <Skeleton />
         <Skeleton animation="wave" />
         <Skeleton animation={false} />
@@ -35,11 +39,6 @@ const UserDetails: React.FC = () => {
   if (error) {
     return <div>Error fetching data</div>;
   }
-  // firstName,
-  //   lastName,
-  //   orgName,
-  //   avatar,
-  //   accountBalance,
   return (
     <Stack padding="0 30px" bgcolor="#E5E5E5" width="100%" gap={2}>
       <UserdetailHeader id={user?.id} />
