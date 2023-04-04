@@ -27,8 +27,8 @@ The user overview page includes all the components that have to do with the user
 ### `Installation`
 
 Clone this repository
-Run npm install to install all the necessary dependencies
-Run npm start to start the development server
+Run yarn add to install all the necessary dependencies
+Run yarn start to start the development server
 
 ### `Contributing`
 
